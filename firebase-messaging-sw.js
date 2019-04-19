@@ -1,10 +1,17 @@
 // Import and configure the Firebase SDK
 // These scripts are made available when the app is served or deployed on Firebase Hosting
 // If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup
-importScripts('/__/firebase/5.5.6/firebase-app.js');
-importScripts('/__/firebase/5.5.6/firebase-messaging.js');
-importScripts('/__/firebase/init.js');
-
+importScripts('https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.9.4/firebase-messaging.js');
+var config = {
+  apiKey: "AIzaSyCbdSNmopmYXyNYgW76mk1DSfozlpu9xoY",
+  authDomain: "javis-push.firebaseapp.com",
+  databaseURL: "https://javis-push.firebaseio.com",
+  projectId: "javis-push",
+  storageBucket: "javis-push.appspot.com",
+  messagingSenderId: "546637372953"
+};
+firebase.initializeApp(config);
 var messaging = firebase.messaging();
 
 /**

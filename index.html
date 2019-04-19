@@ -77,7 +77,18 @@ limitations under the License.
 <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
 <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-messaging.js"></script>
-<!-- <script src="https://www.gstatic.com/firebasejs/5.9.4/init.js"></script> -->
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCbdSNmopmYXyNYgW76mk1DSfozlpu9xoY",
+    authDomain: "javis-push.firebaseapp.com",
+    databaseURL: "https://javis-push.firebaseio.com",
+    projectId: "javis-push",
+    storageBucket: "javis-push.appspot.com",
+    messagingSenderId: "546637372953"
+  };
+  firebase.initializeApp(config);
+</script>
 
 <script>
   // [START get_messaging_object]
@@ -86,7 +97,7 @@ limitations under the License.
   // [END get_messaging_object]
   // [START set_public_vapid_key]
   // Add the public key generated from the console here.
-  messaging.usePublicVapidKey('<YOUR_PUBLIC_VAPID_KEY_HERE>');
+  messaging.usePublicVapidKey('BPWl7hVCSWow3ksPeBi-hrexUSyR5mAVc7N6uZD-00qFia8CyLW8DHKQ-TmB6wKq3lfmcAa7uPz5gYSHN_Psug8');
   // [END set_public_vapid_key]
 
   // IDs of divs that display Instance ID token UI or request permission UI.
